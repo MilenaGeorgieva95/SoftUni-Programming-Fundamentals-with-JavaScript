@@ -1,9 +1,8 @@
 function sequences(input) {
   let sortedArr = [];
-  let result = [];
+  
   for (let line of input) {
-    let str = line.slice(1, line.length - 1);
-    arr = str.split(", ").map(Number);
+    arr = JSON.parse(line);
     arr.sort((a, b) => b - a);
     sortedArr.push(arr);
   }
