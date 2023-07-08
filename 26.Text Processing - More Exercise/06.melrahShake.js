@@ -1,10 +1,8 @@
 function melrahShake(input) {
   let text = input[0];
   let pattern = input[1];
-  let areValidParams = false;
 
   while (pattern.length >= 0) {
-    areValidParams = true;
     let firstMatch = text.indexOf(pattern);
     let lastMatch = text.lastIndexOf(pattern);
 
@@ -28,10 +26,6 @@ function melrahShake(input) {
     tempPat.splice(pattern.length / 2, 1);
     pattern = tempPat.join("");
     console.log("Shaked it.");
-  }
-  if (!areValidParams) {
-    console.log("No shake.");
-    console.log(text);
   }
 }
 melrahShake(["##mtm!!mm.mm*mtm.#", "m"]);
